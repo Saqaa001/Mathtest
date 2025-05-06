@@ -3,10 +3,11 @@ import pandas as pd # type: ignore
 import re
 import firebase_admin # type: ignore
 from firebase_admin import credentials, firestore # type: ignore
+from pathlib import Path
 
 # --- Firebase Init ---
 if not firebase_admin._apps:
-    cred = credentials.Certificate("/full/path/to/latex.json")
+    cred = credentials.Certificate("mathtest/latex.json")
     firebase_admin.initialize_app(cred)
 db = firestore.client()
 
