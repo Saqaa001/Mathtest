@@ -6,7 +6,7 @@ from firebase_admin import credentials, firestore # type: ignore
 
 # --- Firebase Init ---
 if not firebase_admin._apps:
-    cred = credentials.Certificate("latex.json")
+    cred = credentials.Certificate("/full/path/to/latex.json")
     firebase_admin.initialize_app(cred)
 db = firestore.client()
 
